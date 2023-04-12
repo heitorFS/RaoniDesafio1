@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Desafio 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="styles.css" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+	<header>
+	    <nav>
+	        <button class="header-button" id="back"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+	        <button class="header-button" id="menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+            </nav>
+	</header>
+	<main>
+	    <h1>Selecione o item desejado</h1>
+	        <div class="buttons-grid">
+		    <button class="main-button animate__animated animate__pulse animate__infinite animate__delay-5s" onclick="openModal(1)">Item 1</button>
+		    <button class="main-button animate__animated animate__pulse animate__infinite animate__delay-5s" onclick="openModal(2)">Item 2</button>
+		    <button class="main-button animate__animated animate__pulse animate__infinite animate__delay-5s" onclick="openModal(3)">Item 3</button>
+		    <button class="main-button animate__animated animate__pulse animate__infinite animate__delay-5s" onclick="openModal(4)">Item 4</button>
+		</div>
+	</main>
+	<div id="modal-container" class="modal-container">
+	    <div id="items-modal" class="modal">
+	        <div class="modal-header">
+		    <button id="close" onclick="closeModal()"><i class="fa-solid fa-x" style="color: #ababab;"></i></button>
+	        </div>
+	        <div class="modal-body">
+	        </div>
+	        <div class="modal-footer">
+		    Produzido por Heitor Freitas :D
+	        </div>
+	    </div>
+	</div>
+    </body>
+    <script src="index.js"></script>
+</html>
