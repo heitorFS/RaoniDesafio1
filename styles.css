@@ -86,9 +86,6 @@ h1 {
   background-color: rgba(24, 237, 237, 0.6);
 
   animation: pulse 5s calc(var(--nth-child) * 0.35s) infinite;
-  /*animation-name: pulse;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;*/
 }
 
 .main-button:hover {
