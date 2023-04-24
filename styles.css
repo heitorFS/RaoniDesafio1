@@ -117,7 +117,7 @@ h1 {
 
 .api-response {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 70vh;
 }
 
 .modal-footer {

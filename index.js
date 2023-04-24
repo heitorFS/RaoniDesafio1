@@ -11,42 +11,35 @@ function openModal(button) {
   modal.style.display = 'flex';
   switch(button) {
     case 1:
-      xhttp.onload = function() {
-let obj = JSON.parse(this.responseText);
-renderContent("CATAAS", 'https://cataas.com' + obj.url);
-      };
-
-      xhttp.open("GET", "https://cataas.com/cat?json=true");
-      xhttp.send();
+      fetch("https://cataas.com/cat?json=true").then((response) => {
+        response.json().then((result) => {
+          renderContent("CATAAS", 'https://cataas.com' + result.url);
+          console.log(result)
+        });
+      });
       break;
     case 2:
-      xhttp.onload = function() {
-let obj = JSON.parse(this.responseText);
-renderContent("RandomFox", obj.image);
-      };
-
-      xhttp.open("GET", "https://randomfox.ca/floof/");
-      xhttp.send();
+      fetch("https://randomfox.ca/floof/").then((response) => {
+        response.json().then((result) => {
+          renderContent("RandomFox", result.image);
+        });
+      });
       break;
     case 3:
-      xhttp.onload = function() {
-let obj = JSON.parse(this.responseText);
-console.log(obj);
-console.log(this.responseText);
-renderContent("Shibe.online", obj[0]);
-      };
-
-      xhttp.open("GET", "http://shibe.online/api/shibes");
-      xhttp.send();
+      fetch("http://shibe.online/api/shibes").then((response) => {
+        response.json().then((result) => {
+          renderContent("Shibe.online", result[0]);
+          console.log(result)
+        });
+      });
       break;
-    case 4:
-      xhttp.onload = function() {
-let obj = JSON.parse(this.responseText);
-renderContent("RandomDog", obj.url);
-      };
-
-      xhttp.open("GET", "https://random.dog/woof.json");
-      xhttp.send();
+    case 4:      
+      fetch("https://random.dog/woof.json").then((response) => {
+        response.json().then((result) => {
+          renderContent("RandomDog", result.url);
+          console.log(result)
+        });
+      });
       break;
   }
 }
