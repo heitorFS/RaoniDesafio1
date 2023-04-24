@@ -63,12 +63,32 @@ h1 {
   padding: 2vh 0;
 }
 
+@keyframes pulse {
+  5% {
+    transform: scale(1.075);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+}
+
+.main-button:nth-child(1) { --nth-child: 1 }
+.main-button:nth-child(2) { --nth-child: 2 }
+.main-button:nth-child(3) { --nth-child: 3 }
+.main-button:nth-child(4) { --nth-child: 4 }
+
 .main-button {
   width: 100%;
   margin: 2vh 0;
   border-radius: 5px;
   border: solid 1px #7de6e9;
   background-color: rgba(24, 237, 237, 0.6);
+
+  animation: pulse 5s calc(var(--nth-child) * 0.35s) infinite;
+  /*animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;*/
 }
 
 .main-button:hover {
